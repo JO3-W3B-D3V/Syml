@@ -33,7 +33,6 @@
     "mocha": "^6.2.0",
     "mocha-webpack": "^1.1.0",
     "npx": "^10.2.0",
-    "puppeteer": "^1.19.0",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
