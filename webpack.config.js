@@ -7,7 +7,7 @@ module.exports =  {
   mode: 'production',
   entry: {
     bundle: './src/index.ts',
-    test: './src/core/Syml.spec.ts'
+    test: './test/Syml.spec.ts'
   },
   devtool: 'inline-source-map',
   module: {

@@ -1,4 +1,4 @@
-import { Syml } from './Syml';
+import { Syml } from '../src/core/Syml';
 import { expect } from 'chai';
 
 const MockTrigger = {
