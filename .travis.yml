@@ -1,4 +1,6 @@
 language: node_js
+node_js:
+  - "10"
 branches:
   only:
   - master
@@ -8,9 +10,8 @@ addons:
     token:
       secure: "1072ee0d01a9c38e8ebe63de16a01abca0be1543" # encrypted value of your token
 before_install:
-  - npm cache clean
+  - npm install -g npm@latest
   - npm install
 script:
-# the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
-- npm run test
-- sonar-scanner
+  - npm run test
+  - sonar-scanner
