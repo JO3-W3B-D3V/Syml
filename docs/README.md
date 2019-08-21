@@ -1,12 +1,6 @@
-# TODO 
-* Implement unit tests. 
-* Update documentation as time goes on. 
-* Implement some sort of pipeline. 
-* Implement SonarQube. 
-* Implement Sonatype. 
-* etc.
-
 # Syml
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=JO3-W3B-D3V_Syml&metric=alert_status)](https://sonarcloud.io/dashboard?id=JO3-W3B-D3V_Syml)
+
 The purpose of Syml is to implement a state manager is to simplify the process of implementing a tool to aid with state management, unfortunately a lot of developers, junior through to senior agree that current implementations of state management such as Redux may be considered unnecessarily complex. 
 
 Furthermore, if you were to look at the underlying API, it could spark some ideas & potentially aid you in implementing your own API of some sort or another. It's very much the case where due to the sheer simplicity, anyone should be able to make sense of this API. 
@@ -66,3 +60,11 @@ To outline some more detailed documentation, here's the current methods that exi
 
 ## Use Case Example
 To illustrate as to how simple this API is to use, you could easily use it with an Angular application... ***Todo***...
+
+# TODO 
+* Implement unit tests. 
+* Update documentation as time goes on. 
+* Implement some sort of pipeline. 
+* Implement SonarQube. 
+* Implement Sonatype. 
+* etc.
