@@ -24,7 +24,7 @@ lib-cov
 # Coverage directory used by tools like istanbul expect the info file.
 !coverage/lcov.info
 coverage/lcov-report
-coverage/process-info
+coverage/processinfo
 coverage/*.json
 
 # nyc test coverage
