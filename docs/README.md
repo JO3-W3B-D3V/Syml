@@ -59,6 +59,10 @@ To outline some more detailed documentation, here's the current methods that exi
 |```updateState```|<ul><li>```action``` - This is just an object that has the same properties of the ```Action``` POJO.</li></ul>|This will update the state & fire the registered trigger(s).|
 |```registerTrigger```|<ul><li>```trigger``` - This is just an object that has the same properties of the ```Trigger``` POJO. </li></ul>|This will allow you to register a trigger, aka a name & some callback/event handler function.|
 |```fireTrigger```|<ul><li>```triggerName``` - This is a string that you're using to specify which trigger you'd like to fire.</li></ul>|This will look for a trigger by the name assigned to some Trigger, this just allows you to manually run the event handler function.|
+|```getRegisteredTriggers```|N/A|This will return an array of all trigger names that have been registered.| 
+|```isTriggerRegistered```|<ul><li>```trigger``` - This is a trigger object, used to see if this trigger name has been registered or not.</li></ul>|This method will return a boolean, stating if that trigger name has been registered or not.|
+|```isTriggerNameRegistered```|<ul><li>```triggerName``` - This is the name of the trigger that you're looking for.</li></ul>|This method will return a boolean, stating if that trigger name has been registered or not.|
+|```destruct```|N/A|This method is used to clear all triggers & to clear the current state stored within Syml.|
 
 ## Use Case Example
-To illustrate as to how simple this API is to use, you could easily 
+To illustrate as to how simple this API is to use, you could easily use it with an Angular application... ***Todo***...
