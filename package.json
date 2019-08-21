@@ -6,19 +6,8 @@
     "build": "npx webpack",
     "build:watch": "npm run build --watch",
     "test": "npx nyc mocha ./test/Syml.spec.ts --require ts-node/register src/**/*.spec.ts",
-    "test:watch": "concurrently --kill-others \"npm run build:watch\" \"live-server --port=9000 --mount=/:public\""
-    "coverage": "nyc npm test"
-  },
-  "nyc": {
-    "extension": [
-      ".ts",
-      ".tsx"
-    ],
-    "reporter": [
-      "lcov"
-    ],
-    "compact": "true",
-    "temp-dir": "coverage"
+    "test:watch": "concurrently --kill-others \"npm run build:watch\" \"live-server --port=9000 --mount=/:public\"",
+    "coverage": "nyc npm test --reporter=lcov --compact=true --extension=ts --temp-dir=coverage"
   },
   "repository": {
     "type": "git",
@@ -32,7 +21,7 @@
   "bugs": {
     "url": "https://github.com/JO3-W3B-D3V/Syml/issues"
   },
-  "homepage": "https://github.com/JO3-W3B-D3V/Syml#readme",
+  "homepage": "https://github.com/JO3-W3B-D3V/Syml",
   "devDependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
