@@ -1,5 +1,5 @@
 TN:
-SF:D:\Git\Syml\src\core\Syml.ts
+SF:src\core\Syml.ts
 FN:16,(anonymous_2)
 FN:41,(anonymous_4)
 FN:56,(anonymous_5)
@@ -67,7 +67,7 @@ BRF:6
 BRH:2
 end_of_record
 TN:
-SF:D:\Git\Syml\src\exceptions\AlreadyRegisteredTriggerException.ts
+SF:src\exceptions\AlreadyRegisteredTriggerException.ts
 FN:13,(anonymous_6)
 FN:29,AlreadyRegisteredTriggerException
 FNF:2
@@ -94,7 +94,7 @@ BRF:4
 BRH:0
 end_of_record
 TN:
-SF:D:\Git\Syml\src\exceptions\Exception.ts
+SF:src\exceptions\Exception.ts
 FN:9,(anonymous_0)
 FN:18,Exception
 FNF:2
@@ -110,7 +110,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:D:\Git\Syml\src\exceptions\NoSuchTriggerException.ts
+SF:src\exceptions\NoSuchTriggerException.ts
 FN:13,(anonymous_6)
 FN:28,NoSuchTriggerException
 FNF:2
@@ -137,7 +137,7 @@ BRF:4
 BRH:3
 end_of_record
 TN:
-SF:D:\Git\Syml\src\exceptions\index.ts
+SF:src\exceptions\index.ts
 FNF:0
 FNH:0
 DA:1,1
