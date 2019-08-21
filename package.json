@@ -7,7 +7,20 @@
     "build:watch": "npm run build --watch",
     "test": "npx nyc mocha ./test/Syml.spec.ts --require ts-node/register src/**/*.spec.ts",
     "test:watch": "concurrently --kill-others \"npm run build:watch\" \"live-server --port=9000 --mount=/:public\"",
-    "coverage": "nyc npm test --reporter=lcov --compact=true --extension=ts --temp-dir=coverage"
+    "coverage:generate": "nyc npm test",
+    "coverage:format": "node format.js",
+    "coverage": "npm run coverage:generate && npm run coverage:format"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "compact": true,
+    "temp-dir": "coverage"
   },
   "repository": {
     "type": "git",
