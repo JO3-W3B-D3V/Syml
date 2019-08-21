@@ -13,5 +13,5 @@ before_install:
   - npm install -g npm@latest
   - npm install
 script:
-  - npm run test
+  - npm run coverage
   - sonar-scanner
