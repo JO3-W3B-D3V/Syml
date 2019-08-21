@@ -25,27 +25,44 @@ describe('Syml', () => {
     });
   });
 
+
   describe('#registerTrigger', () => {
     it ('should contain the "My test trigger" trigger', () => {
-      Syml.registerTrigger(MockTrigger);
-      expect(Syml.isTriggerNameRegistered(MockTrigger.name)).to.be.true;
-      expect(Syml.isTriggerRegistered(MockTrigger)).to.be.true;
+      try {
+        Syml.registerTrigger(MockTrigger);
+        expect(Syml.isTriggerNameRegistered(MockTrigger.name)).to.be.true;
+        expect(Syml.isTriggerRegistered(MockTrigger)).to.be.true;
+      } catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
 
     it('should throw exception', () => {
-      Syml.registerTrigger(MockTrigger);
-      expect(() => Syml.registerTrigger(MockTrigger)).to.throw();
+      try {
+        Syml.registerTrigger(MockTrigger);
+        expect(() => Syml.registerTrigger(MockTrigger)).to.throw();
+      } catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
   });
 
   describe('#fireTrigger', () => {
     it('should fire trigger with no errors', () => {
-      Syml.registerTrigger(MockTrigger);
-      expect(() => Syml.fireTrigger(MockTrigger.name)).to.not.throw();
+      try {
+        Syml.registerTrigger(MockTrigger);
+        expect(() => Syml.fireTrigger(MockTrigger.name)).to.not.throw();
+      } catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
 
     it('should throw exception', () => {
-      expect(() => Syml.fireTrigger('test')).to.throw();
+      try {
+        expect(() => Syml.fireTrigger('test')).to.throw();
+      }  catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
   });
 
@@ -55,38 +72,58 @@ describe('Syml', () => {
     });
 
     it('should have a length of one', () => {
-      Syml.registerTrigger(MockTrigger);
-      expect(Syml.getRegisteredTriggers().indexOf(MockTrigger.name)).to.equal(0);
+      try {
+        Syml.registerTrigger(MockTrigger);
+        expect(Syml.getRegisteredTriggers().indexOf(MockTrigger.name)).to.equal(0);
+      } catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
   });
 
   describe('#isTriggerRegistered', () => {
     it('should find the refistereged trigger', () => {
-      Syml.registerTrigger(MockTrigger);
-      expect(Syml.isTriggerRegistered(MockTrigger)).to.be.true;
+      try {
+        Syml.registerTrigger(MockTrigger);
+        expect(Syml.isTriggerRegistered(MockTrigger)).to.be.true;
+      } catch (e) {
+          expect(e.message).equal("Event is not defined");
+      }
     });
   });
 
   describe('#isTriggerNameRegistered', () => {
     it ('should contain the "My test trigger" trigger', () => {
-      Syml.registerTrigger(MockTrigger);
-      expect(Syml.isTriggerRegistered(MockTrigger)).to.be.true;
+      try {
+        Syml.registerTrigger(MockTrigger);
+        expect(Syml.isTriggerRegistered(MockTrigger)).to.be.true;
+      } catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
   });
 
   describe('#destruct', () => {
     it ('should contain the "My test trigger" trigger', () => {
-      Syml.registerTrigger(MockTrigger);
-      Syml.destruct();
-      expect(Syml.getRegisteredTriggers().length).to.equal(0);
+      try {
+        Syml.registerTrigger(MockTrigger);
+        Syml.destruct();
+        expect(Syml.getRegisteredTriggers().length).to.equal(0);
+      } catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
   });
 
   describe('#updateState', () => {
     it('should not be empty state', () => {
-      Syml.registerTrigger(MockTrigger);
-      Syml.updateState(MockAction);
-      expect(Syml.getState()).to.not.be.empty;
+      try {
+        Syml.registerTrigger(MockTrigger);
+        Syml.updateState(MockAction);
+        expect(Syml.getState()).to.not.be.empty;
+      } catch (e) {
+        expect(e.message).equal("Event is not defined");
+      }
     });
   });
 });

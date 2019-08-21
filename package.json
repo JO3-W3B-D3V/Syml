@@ -4,8 +4,10 @@
   "description": "Syml is a lightweight & very easy to use state managment tool.",
   "main": "index.js",
   "scripts": {
-    "build": "npx webpack --watch",
-    "test": "concurrently --kill-others \"npm run build\" \"live-server --port=9000 --mount=/:public\""
+    "build": "npx webpack",
+    "build:watch": "npm run build --watch",
+    "test": "npm run build && npx mocha \"public/test.js\"",
+    "test:watch": "concurrently --kill-others \"npm run build:watch\" \"live-server --port=9000 --mount=/:public\""
   },
   "repository": {
     "type": "git",
@@ -22,6 +24,7 @@
   "homepage": "https://github.com/JO3-W3B-D3V/Syml#readme",
   "devDependencies": {
     "@types/mocha": "^5.2.7",
+    "@types/node": "^12.7.2",
     "chai": "^4.2.0",
     "concurrently": "^4.1.2",
     "jsdom": "15.1.1",
@@ -30,6 +33,7 @@
     "mocha": "^6.2.0",
     "mocha-webpack": "^1.1.0",
     "npx": "^10.2.0",
+    "puppeteer": "^1.19.0",
     "ts-loader": "^6.0.4",
     "typescript": "^3.5.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
