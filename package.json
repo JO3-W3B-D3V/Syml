@@ -6,9 +6,20 @@
   "scripts": {
     "build": "npx webpack",
     "build:watch": "npm run build --watch",
-    "test": "npm run build && npx mocha \"public/test.js\"",
-    "coverage": "nyc --reporter=lcov --compact=true --temp-dir=coverage --include=public --exclude=node_modules npm run test \"public/test.js\"",
+    "test": "npx nyc mocha ./test/Syml.spec.ts --require ts-node/register src/**/*.spec.ts",
     "test:watch": "concurrently --kill-others \"npm run build:watch\" \"live-server --port=9000 --mount=/:public\""
+    "coverage": "nyc npm test"
+  },
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "reporter": [
+      "lcov"
+    ],
+    "compact": true,
+    "temp-dir": "coverage"
   },
   "repository": {
     "type": "git",
@@ -36,6 +47,7 @@
     "npx": "^10.2.0",
     "nyc": "^14.1.1",
     "ts-loader": "^6.0.4",
+    "ts-node": "^8.3.0",
     "typescript": "^3.5.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.2",
