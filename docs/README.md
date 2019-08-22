@@ -1,6 +1,7 @@
 # Syml
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=JO3-W3B-D3V_Syml&metric=alert_status)](https://sonarcloud.io/dashboard?id=JO3-W3B-D3V_Syml)
 [![Build Status](https://travis-ci.org/JO3-W3B-D3V/Syml.svg?branch=master)](https://travis-ci.org/JO3-W3B-D3V/Syml)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://paypal.me/JO3W3BD3V?locale.x=en_GB)
 
 The purpose of Syml is to implement a state manager is to simplify the process of implementing a tool to aid with state management, unfortunately a lot of developers, junior through to senior agree that current implementations of state management such as Redux may be considered unnecessarily complex. 
 
