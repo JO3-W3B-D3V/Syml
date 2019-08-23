@@ -35,7 +35,7 @@
     "url": "https://github.com/JO3-W3B-D3V/Syml/issues"
   },
   "homepage": "https://github.com/JO3-W3B-D3V/Syml",
-  "devDependencies": {
+  "dependencies": {
     "@types/mocha": "^5.2.7",
     "@types/node": "^12.7.2",
     "chai": "^4.2.0",
