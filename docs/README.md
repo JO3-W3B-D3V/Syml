@@ -60,11 +60,3 @@ To outline some more detailed documentation, here's the current methods that exi
 
 ## Use Case Example
 To illustrate as to how simple this API is to use, you could easily use it with an Angular application... ***Todo***...
-
-# TODO 
-* Implement unit tests. 
-* Update documentation as time goes on. 
-* Implement some sort of pipeline. 
-* Implement SonarQube. 
-* Implement Sonatype. 
-* etc.
