@@ -13,8 +13,6 @@ Of course, state management isn't always necessary & I know what a lot of you ar
 
 But that's the thing, this isn't just another state manager, it's a simple state manager, so simple in fact that it doesn't tie you into factoring your code specifically for this API. Like with Redux & similar technologies, you need to implement your reducers, your actions, dispatcher, etc. It can get quite complicated quite quickly, especially if you're not familiar with the Flux architecture. 
 
-Syml is so simple that the name itself is simple, quite literally Syml is Welsh for simple. 
-
 ## Difference Outline
 With Syml, it stores the state _almost_ like a global object, unlike Redux, Syml doesn't segregate the state, this is a deliberate design, it's to try and reduce the overall complexity of using & interacting with Syml.
 
