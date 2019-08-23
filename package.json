@@ -9,7 +9,9 @@
     "test:watch": "concurrently --kill-others \"npm run build:watch\" \"live-server --port=9000 --mount=/:public\"",
     "coverage:generate": "nyc npm test",
     "coverage:format": "node format.js",
-    "coverage": "npm run coverage:generate && npm run coverage:format"
+    "coverage": "npm run coverage:generate && npm run coverage:format",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "nyc": {
     "extension": [
@@ -52,6 +54,8 @@
     "typescript": "^3.5.3",
     "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "^4.39.2",
-    "webpack-cli": "^3.3.7"
-  }
+    "webpack-cli": "^3.3.7",
+    "snyk": "^1.217.3"
+  },
+  "snyk": true
 }
