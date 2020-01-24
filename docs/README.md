@@ -38,12 +38,14 @@ Another similarity is that when you retrieve the state from the state manager, i
 To outline some more detailed documentation, here's the current methods that exist on the Syml API. 
 
 ### POJO's
+
 |Name|Properties|Description|
 |---------|----------|-----------|
 |```Trigger```|<ul><li>```name``` - This is a string which is stored to a collection of triggers, this **MUST** be unique.</li><li>```trigger``` - This is just a function/callback method that you'd like to run when the trigger is being fired.</li></ul>|This POJO is used to ensure that the relevant properties are being provided to the ```registerTrigger``` method.|
 |```Action```|<ul><li>```name``` - This is a string which is used to refer to some trigger name.</li><li>```payload``` - This is essentially the **new** state that you'd like to apply.</li></ul>|This is being used to ensure that the ```updateState``` method can handle the relevant update's that you're trying to apply.|
 
 ### Exceptions
+
 |Name|Parameters|Description|
 |--------------|----------|-----------|
 |```Exception```|<ul><li>```message``` - This is a string that should have some form of meaning.</li></ul>|This is just a base exception class, it's just there to save on repeating code.|
